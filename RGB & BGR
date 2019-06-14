@@ -1,0 +1,12 @@
+img = cv2.imread("D:/test.jpg")
+#b,g,r = cv2.split(img)
+#img2 = cv2.merge([r,g,b])
+img2 = img[:,:,::-1]
+plt.subplot(121);plt.imshow(img)     #MATPLOTLIB follows RGB
+plt.subplot(122);plt.imshow(img2)    #opencv follows BGR
+plt.show()
+
+cv2.imshow('bgr image',img)
+cv2.imshow('rgb image',img2)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
